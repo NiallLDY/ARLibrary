@@ -112,7 +112,7 @@
 		B66C78612435F01900ABC5CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B63382FF2439DE8B00A45438 /* ARRoad */,
+				B66C78682436F52200ABC5CA /* Cells */,
 				B66C78622435F03D00ABC5CA /* LoadBooksDatafromWeb.swift */,
 			);
 			path = ViewModel;
@@ -156,6 +156,7 @@
 		B6ABBD7C2435EA1500C8F56D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B63382FF2439DE8B00A45438 /* ARRoad */,
 				B6ABBD7A2435E59600C8F56D /* BookModel.swift */,
 				B63383082439DFBF00A45438 /* Map.swift */,
 			);
@@ -224,7 +225,6 @@
 				B6ABBD7C2435EA1500C8F56D /* Model */,
 				B66C78612435F01900ABC5CA /* ViewModel */,
 				B6ABBD7F2435EA6E00C8F56D /* ViewControllers */,
-				B66C78682436F52200ABC5CA /* Cells */,
 				B6ABBD7E2435EA4F00C8F56D /* Storyboard */,
 				B6DC9A4A2434363500155315 /* books.json */,
 				B6F32FD0243304B3005812B2 /* SceneDelegate.swift */,
