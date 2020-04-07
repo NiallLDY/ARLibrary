@@ -40,6 +40,7 @@
 		B606430E243A026000808891 /* ARViewController+CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+CoachingOverlay.swift"; sourceTree = "<group>"; };
 		B6064310243B08AA00808891 /* ARViewController+ImageDetecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ImageDetecting.swift"; sourceTree = "<group>"; };
 		B6064315243B14C700808891 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		B6064317243C483300808891 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B63382FD2439DD5C00A45438 /* ARViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Navigation.swift"; sourceTree = "<group>"; };
 		B63383002439DE8B00A45438 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 		B63383012439DE8B00A45438 /* float4x4+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "float4x4+Extension.swift"; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 		B6F32FC2243304B3005812B2 = {
 			isa = PBXGroup;
 			children = (
+				B6064317243C483300808891 /* README.md */,
 				B6F32FCD243304B3005812B2 /* ARLibrary */,
 				B6F32FCC243304B3005812B2 /* Products */,
 			);
