@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Pop!.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 19.699999999999999
+  }
+}

@@ -16,9 +16,9 @@ extension ARViewController: ARCoachingOverlayViewDelegate {
     
     /// - Tag: PresentUI
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
-        let results = sceneView.hitTest(CGPoint(x: 0.5,y: 0.5), types: [.existingPlane, .estimatedHorizontalPlane])
-        pathNode.position.y = results[0].worldTransform.self[3][1]
-        sceneView.scene.rootNode.addChildNode(pathNode)
+        //let results = sceneView.hitTest(CGPoint(x: 0.5,y: 0.5), types: [.existingPlane, .estimatedHorizontalPlane])
+        //pathNode.position.y = results[0].worldTransform.self[3][1]
+        //sceneView.scene.rootNode.addChildNode(pathNode)
         // navigationController?.isNavigationBarHidden = false
     }
 

@@ -190,6 +190,7 @@
 				B66C786B2436F57100ABC5CA /* BookDetailView */,
 				B63382FA2439D7FE00A45438 /* NavigationView */,
 				B6064312243B147B00808891 /* PopUpBookView */,
+				B6C19E7424498EA20096D38C /* LoginView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +201,13 @@
 				B6F32FD2243304B3005812B2 /* BookListViewController.swift */,
 			);
 			path = SearchResultView;
+			sourceTree = "<group>";
+		};
+		B6C19E7424498EA20096D38C /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		B6F32FC2243304B3005812B2 = {

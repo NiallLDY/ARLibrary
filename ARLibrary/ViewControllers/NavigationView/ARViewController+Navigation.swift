@@ -54,7 +54,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         popUpViewController.cancelHandler = { [unowned self] in
             
             //self.blurView.transform = CGAffineTransform(scaleX: 0, y: 0)
-            UIView.animate(withDuration: 2, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            UIView.animate(withDuration: 2, delay: 0.1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
                 self.blurView.transform = CGAffineTransform(translationX: 8, y: 872)
             }, completion: { s in
                 // self.blurView.isHidden = true
@@ -94,10 +94,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             fatalError("Missing expected asset catalog resources.")
         }
         
+        guard let OrginLocationImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources-Road", bundle: nil) else {
+            fatalError("Missing expected asset catalog resources.")
+        }
+        
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal, .vertical]
         configuration.detectionImages = referenceImages
+        configuration.detectionImages = OrginLocationImages
         // Run the view's session
         sceneView.session.run(configuration)
         

@@ -16,6 +16,15 @@ extension ARViewController {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
+        if referenceImage.name == "al" {
+            pathNode.position.y = 0
+            
+            let heght = referenceImage.physicalSize.height
+            pathNode.position.z = pathNode.position.z + Float(heght)/2
+            
+            node.addChildNode(pathNode)
+            return
+        }
         updateQueue.async {
             
             // Create a plane to visualize the initial position of the detected image.
@@ -51,6 +60,7 @@ extension ARViewController {
                 self.blurView.transform = .identity
             }, completion: nil)
         }
+        
     }
     var imageHighlightAction: SCNAction {
         return .sequence([
