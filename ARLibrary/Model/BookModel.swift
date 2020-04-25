@@ -39,5 +39,6 @@ func loadjson<T: Decodable>(_ filename: String) -> T {
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
-    
 }
+    
+let testBookContent: [Book] = loadjson("books.json")

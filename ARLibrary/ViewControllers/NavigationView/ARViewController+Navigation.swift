@@ -94,15 +94,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             fatalError("Missing expected asset catalog resources.")
         }
         
-        guard let OrginLocationImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources-Road", bundle: nil) else {
-            fatalError("Missing expected asset catalog resources.")
-        }
-        
+
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal, .vertical]
         configuration.detectionImages = referenceImages
-        configuration.detectionImages = OrginLocationImages
         // Run the view's session
         sceneView.session.run(configuration)
         
