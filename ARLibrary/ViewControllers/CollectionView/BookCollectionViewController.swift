@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 
@@ -25,6 +26,9 @@ class BookCollectionViewController: UICollectionViewController, UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // MyProfile View
+        setupUI()
+        
         
         resultsTableController = self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as? BookListViewController
         
@@ -129,4 +133,22 @@ class BookCollectionViewController: UICollectionViewController, UITableViewDeleg
 struct BookPreview {
     var title: String
     var images: [String]
+}
+extension BookCollectionViewController {
+    @IBAction func action(_ sender: AnyObject) {
+        let loginView = LoginView(dismissAction: { self.dismiss( animated: true, completion: nil) })
+        let LoginViewController = UIHostingController(rootView: loginView)
+        self.present(LoginViewController, animated: true, completion: nil)
+    }
+    
+    private func setupUI() {
+        let profile = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle")!,
+                                          style: .plain,
+                                          target: self,
+                                          action: #selector(action(_:)))
+        navigationItem.rightBarButtonItem = profile
+        
+        
+    }
+    
 }
