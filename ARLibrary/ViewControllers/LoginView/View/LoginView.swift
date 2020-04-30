@@ -35,7 +35,7 @@ struct LoginView: View {
                     Section(header: Text("登录")) {
                         TextField("用户名", text: self.$name)
                         SecureField("密码", text: self.$password, onCommit: {
-                            print("好起来了")
+                            
                         })
                     }
                     Section {
