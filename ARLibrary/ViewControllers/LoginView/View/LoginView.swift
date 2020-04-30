@@ -13,12 +13,13 @@ struct LoginView: View {
     @State var name = ""
     @State var password = ""
     @State var loginSuccessed = false
+    @State var passwordWrong = false
     var body: some View {
         NavigationView {
             Form {
                 if loginSuccessed {
                     Section(header: Text("登录成功")) {
-                       Text("欢迎你～")
+                        Text("欢迎你～" + self.name)
                     }
                     Section {
                         Button(action: {
@@ -28,7 +29,7 @@ struct LoginView: View {
                         }
                     }
                     Section(header: Text("我的收藏")) {
-                        BookRowView()
+                        BookListView()
                     }
                 } else {
                     Section(header: Text("登录")) {
@@ -38,10 +39,19 @@ struct LoginView: View {
                         })
                     }
                     Section {
-                        Button(action: {
-                            self.loginSuccessed = true
-                        }) {
-                            Text("登录")
+                        Button("登录") {
+                            Login(username: self.name, password: self.password) { valid in
+                                if (valid) {
+                                    self.loginSuccessed = true
+                                }
+                                else {
+                                    self.passwordWrong = true
+                                }
+                            }
+                        }
+                        .disabled(self.name == "" || self.password == "")
+                        .alert(isPresented: self.$passwordWrong) {
+                            Alert(title: Text("登录失败"), message: Text("用户名或密码错误"), dismissButton: .default(Text("取消")))
                         }
                     }
                 }
@@ -61,12 +71,7 @@ struct LoginView: View {
     }
 }
 
-struct BookRowView: View {
-    @State var selectbook: Book = testBookContent[0]
-    var body: some View {
-        Text(selectbook.name)
-    }
-}
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

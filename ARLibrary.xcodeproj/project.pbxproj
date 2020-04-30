@@ -17,6 +17,9 @@
 		B63383062439DE8B00A45438 /* SCNGeometry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63383022439DE8B00A45438 /* SCNGeometry+Extensions.swift */; };
 		B63383072439DE8B00A45438 /* SCNPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63383032439DE8B00A45438 /* SCNPathNode.swift */; };
 		B63383092439DFBF00A45438 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63383082439DFBF00A45438 /* Map.swift */; };
+		B662D0AA245A64BE007A7ED1 /* myProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662D0A9245A64BE007A7ED1 /* myProfile.swift */; };
+		B662D0AC245A6DE2007A7ED1 /* checkVaild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662D0AB245A6DE2007A7ED1 /* checkVaild.swift */; };
+		B662D0B2245A7F5F007A7ED1 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662D0B1245A7F5F007A7ED1 /* BookListView.swift */; };
 		B66C78632435F03D00ABC5CA /* LoadBooksDatafromWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C78622435F03D00ABC5CA /* LoadBooksDatafromWeb.swift */; };
 		B66C7865243606A800ABC5CA /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C7864243606A800ABC5CA /* BookCollectionViewController.swift */; };
 		B66C78672436094E00ABC5CA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C78662436094E00ABC5CA /* CollectionViewCell.swift */; };
@@ -48,6 +51,9 @@
 		B63383022439DE8B00A45438 /* SCNGeometry+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNGeometry+Extensions.swift"; sourceTree = "<group>"; };
 		B63383032439DE8B00A45438 /* SCNPathNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNPathNode.swift; sourceTree = "<group>"; };
 		B63383082439DFBF00A45438 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		B662D0A9245A64BE007A7ED1 /* myProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfile.swift; sourceTree = "<group>"; };
+		B662D0AB245A6DE2007A7ED1 /* checkVaild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkVaild.swift; sourceTree = "<group>"; };
+		B662D0B1245A7F5F007A7ED1 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		B66C78622435F03D00ABC5CA /* LoadBooksDatafromWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadBooksDatafromWeb.swift; sourceTree = "<group>"; };
 		B66C7864243606A800ABC5CA /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		B66C78662436094E00ABC5CA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +115,24 @@
 				B63383032439DE8B00A45438 /* SCNPathNode.swift */,
 			);
 			path = ARRoad;
+			sourceTree = "<group>";
+		};
+		B662D0A7245A647B007A7ED1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B662D0A9245A64BE007A7ED1 /* myProfile.swift */,
+				B662D0AB245A6DE2007A7ED1 /* checkVaild.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B662D0A8245A6488007A7ED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6C19E75244AEAED0096D38C /* LoginView.swift */,
+				B662D0B1245A7F5F007A7ED1 /* BookListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B66C78612435F01900ABC5CA /* ViewModel */ = {
@@ -208,7 +232,8 @@
 		B6C19E7424498EA20096D38C /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				B6C19E75244AEAED0096D38C /* LoginView.swift */,
+				B662D0A7245A647B007A7ED1 /* Model */,
+				B662D0A8245A6488007A7ED1 /* View */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -325,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B606430F243A026000808891 /* ARViewController+CoachingOverlay.swift in Sources */,
+				B662D0AC245A6DE2007A7ED1 /* checkVaild.swift in Sources */,
 				B6F32FD3243304B3005812B2 /* BookListViewController.swift in Sources */,
 				B63383052439DE8B00A45438 /* float4x4+Extension.swift in Sources */,
 				B6064316243B14C700808891 /* PopUpViewController.swift in Sources */,
@@ -341,7 +367,9 @@
 				B6DC9A532435AE4D00155315 /* BookIntroductionCell.swift in Sources */,
 				B66C78672436094E00ABC5CA /* CollectionViewCell.swift in Sources */,
 				B6F32FD1243304B3005812B2 /* SceneDelegate.swift in Sources */,
+				B662D0AA245A64BE007A7ED1 /* myProfile.swift in Sources */,
 				B63383062439DE8B00A45438 /* SCNGeometry+Extensions.swift in Sources */,
+				B662D0B2245A7F5F007A7ED1 /* BookListView.swift in Sources */,
 				B69DEE8E24376AE5001A3425 /* BookCollectionView+ResultTableController.swift in Sources */,
 				B63383072439DE8B00A45438 /* SCNPathNode.swift in Sources */,
 				B6DC9A4F24358FD100155315 /* BookDetailViewController.swift in Sources */,
