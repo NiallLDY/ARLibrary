@@ -7,16 +7,55 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct BookListView: View {
-    @State var selectbook: Book = testBookContent[0]
+    @State var favouriteBooks: [Book]
     var body: some View {
-        Text(selectbook.name)
+        List(favouriteBooks) { book in
+            BookRowView(selectbook: book)
+        }
     }
 }
 
 struct BookListView_Previews: PreviewProvider {
     static var previews: some View {
-        BookListView()
+        Group {
+            BookListView(favouriteBooks: testBookContent)
+            BookRowView(selectbook: testBookContent[0])
+        }
+        
+    }
+}
+struct BookRowView: View {
+    @State var selectbook: Book
+    // @State var imageLoaded: Bool = false
+    @State var image = UIImage()
+    var body: some View {
+        HStack {
+            HStack(spacing: 20) {
+                WebImage(url: URL(string: self.selectbook.image)!)
+                    .placeholder(Image(systemName: "book"))
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 70, height: 90)
+                    .cornerRadius(5)
+                
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(self.selectbook.name)
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                    Text(self.selectbook.auther)
+                        .lineLimit(1)
+                    Text(self.selectbook.type)
+                }
+                
+            }
+            Spacer()
+            Image(systemName: "star.fill")
+                .font(.system(size: 26))
+                .foregroundColor(.yellow)
+        }
     }
 }

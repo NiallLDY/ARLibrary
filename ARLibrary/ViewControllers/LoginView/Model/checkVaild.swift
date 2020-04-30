@@ -53,7 +53,7 @@ func Login(username: String, password: String, completion: @escaping (Bool) -> (
         // Convert HTTP Response Data to a simple String
         guard let data = data else { return }
         print(data.html2String)
-        let vaild =  data.html2String == "success"
+        let vaild = data.html2String == "success"
         DispatchQueue.main.async {
             completion(vaild)
         }

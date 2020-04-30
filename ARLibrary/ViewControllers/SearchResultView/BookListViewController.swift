@@ -42,9 +42,9 @@ class BookListViewController: UITableViewController {
         // Set the placeholder's contentMode to scaleAspectFit
         cell.bookImageView.contentMode = .scaleAspectFit
         
-        let urlString = loadImageURL + booksArray[indexPath.row].id + ".png"
+        let urlString = booksArray[indexPath.row].image
         let url = URL(string: urlString)
-        cell.bookImageView?.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"), completed: {(image, error, cache, url) in
+        cell.bookImageView?.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"), completed: { (image, error, cache, url) in
             // Set the image's contentMode to scaleAspectFill
             cell.bookImageView.contentMode = .scaleAspectFill
         })

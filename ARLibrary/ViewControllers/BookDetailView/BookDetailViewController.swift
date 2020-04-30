@@ -52,7 +52,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookInformationCell
             
             // Load image from web if it's not loaded before. Since SDWebImage has handled the storeage already for us, we don't need manage this personally.
-            let urlString = loadImageURL + selectBook.id + ".png"
+            let urlString = selectBook.image
             let url = URL(string: urlString)
             cell.bookImage.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"), completed: {(image, error, cache, url) in
                 cell.bookImage.contentMode = .scaleAspectFill

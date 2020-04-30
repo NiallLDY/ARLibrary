@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Book: Codable {
+struct Book: Codable, Hashable, Identifiable {
     var id: String
     var name: String
     var auther: String

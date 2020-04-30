@@ -136,7 +136,7 @@ struct BookPreview {
 }
 extension BookCollectionViewController {
     @IBAction func action(_ sender: AnyObject) {
-        let loginView = LoginView(dismissAction: { self.dismiss( animated: true, completion: nil) })
+        let loginView = LoginView(dismissAction: { self.dismiss( animated: true, completion: nil) }).environmentObject(SettingStore())
         let LoginViewController = UIHostingController(rootView: loginView)
         self.present(LoginViewController, animated: true, completion: nil)
     }

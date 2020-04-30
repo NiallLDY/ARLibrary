@@ -49,4 +49,4 @@ func decodeJSON<T: Decodable>(data: Data) -> T {
 }
 
 public let loadImageURL = "http://123.56.238.98/images/"
-public let loadDataURL = "http://123.56.238.98/index.php?name="
+public let loadDataURL = "http://49.234.211.136:8080/searchBook?name="
