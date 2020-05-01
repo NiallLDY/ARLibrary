@@ -20,7 +20,7 @@ extension BookCollectionViewController: UISearchBarDelegate, UISearchResultsUpda
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchText = searchBar.text {
-            loadData(urlString: "http://123.56.238.98/index.php?name=" + searchText) { books in
+            loadData(urlString: loadDataURL + searchText) { books in
                 if let resultsController = self.resultsTableController {
                     resultsController.booksArray = books
                     resultsController.tableView.reloadData()

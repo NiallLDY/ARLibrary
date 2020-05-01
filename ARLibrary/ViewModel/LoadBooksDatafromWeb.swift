@@ -30,6 +30,7 @@ func loadData(urlString: String, completion: @escaping ([Book]) -> ()) {
         }
         // Convert HTTP Response Data to a simple String
         guard let data = data else { return }
+        // print(data.html2String)
         let books: [Book] = decodeJSON(data: data)
         DispatchQueue.main.async {
             completion(books)
@@ -48,5 +49,5 @@ func decodeJSON<T: Decodable>(data: Data) -> T {
     }
 }
 
-public let loadImageURL = "http://123.56.238.98/images/"
+public let loadImageURL = "http://49.234.211.136:8080/images/"
 public let loadDataURL = "http://49.234.211.136:8080/searchBook?name="

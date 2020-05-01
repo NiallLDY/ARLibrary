@@ -52,10 +52,46 @@ func Login(username: String, password: String, completion: @escaping (Bool) -> (
         }
         // Convert HTTP Response Data to a simple String
         guard let data = data else { return }
-        print(data.html2String)
+        // print(data.html2String)
         let vaild = data.html2String == "success"
         DispatchQueue.main.async {
             completion(vaild)
+        }
+        
+    }
+    task.resume()
+}
+
+func makeUnFavourite(id: String, favourite: Bool, completion: @escaping (Bool) -> ()) {
+    // Create URL
+    // 喜欢，下一步不喜欢。
+    let ifFavourite = favourite ? "deleteCollect" : "addCollect"
+    let urlString = "http://49.234.211.136:8080/" + ifFavourite + "?id=" + id
+    let encodedStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    let url = URL(string: encodedStr)
+    guard let requestUrl = url else { fatalError() }
+    
+    // Create URL Request
+    var request = URLRequest(url: requestUrl)
+    
+    // Specify HTTP Method to use
+    request.httpMethod = "GET"
+    
+    
+    // Send HTTP Request
+    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        // Check if Error took place
+        if let error = error {
+            print("Error took place \(error)")
+            return
+        }
+        // Convert HTTP Response Data to a simple String
+        guard let data = data else { return }
+        // print(data.html2String)
+        let vaild = data.html2String.contains("请登录")
+        DispatchQueue.main.async {
+            // 包含“请登录”说明取消收藏失败
+            completion(!vaild)
         }
         
     }

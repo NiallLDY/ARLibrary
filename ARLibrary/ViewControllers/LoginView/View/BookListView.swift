@@ -8,6 +8,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import AudioToolbox
 
 struct BookListView: View {
     @State var favouriteBooks: [Book]
@@ -29,8 +30,7 @@ struct BookListView_Previews: PreviewProvider {
 }
 struct BookRowView: View {
     @State var selectbook: Book
-    // @State var imageLoaded: Bool = false
-    @State var image = UIImage()
+    @State var isFavourite = true
     var body: some View {
         HStack {
             HStack(spacing: 20) {
@@ -50,12 +50,20 @@ struct BookRowView: View {
                         .lineLimit(1)
                     Text(self.selectbook.type)
                 }
-                
             }
             Spacer()
-            Image(systemName: "star.fill")
+            Image(systemName: isFavourite ? "star.fill" : "star")
                 .font(.system(size: 26))
                 .foregroundColor(.yellow)
+                .onTapGesture {
+                    makeUnFavourite(id: self.selectbook.id, favourite: self.isFavourite ,completion: { success in
+                        if (success) {
+                            self.isFavourite.toggle()
+                            let soundShort = SystemSoundID(1519)
+                            AudioServicesPlaySystemSound(soundShort)
+                        }
+                    })
+            }
         }
     }
 }

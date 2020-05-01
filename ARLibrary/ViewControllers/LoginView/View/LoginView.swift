@@ -61,11 +61,9 @@ struct LoginView: View {
                         }
                     }
                 }
-                
             }
             .navigationBarTitle("我的主页")
-            .navigationBarItems(trailing:
-                Button(action: {
+            .navigationBarItems(trailing: Button(action: {
                     self.dismissAction()
                 }, label: {
                     Text("完成")
@@ -75,6 +73,7 @@ struct LoginView: View {
         .onAppear() {
             // 如果之前登录了
             if (self.settingStore.hasLogin) {
+                self.name = self.settingStore.username
                 Login(username: self.settingStore.username, password: self.settingStore.password) {_ in
                     loadData(urlString: "http://49.234.211.136:8080/jsonCollect") { books in
                         self.favouriteBooks = books

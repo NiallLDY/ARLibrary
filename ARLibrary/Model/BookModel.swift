@@ -17,9 +17,10 @@ struct Book: Codable, Hashable, Identifiable {
     var coordinateX: String
     var coordinateY: String
     var coordinateZ: String
+    var breifIntroduction: String
     // var isFavourit: Bool = false
 }
-func loadjson<T: Decodable>(_ filename: String) -> T {
+func loadjsonfromFile<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
@@ -41,4 +42,4 @@ func loadjson<T: Decodable>(_ filename: String) -> T {
     }
 }
     
-let testBookContent: [Book] = loadjson("books.json")
+let testBookContent: [Book] = loadjsonfromFile("books.json")

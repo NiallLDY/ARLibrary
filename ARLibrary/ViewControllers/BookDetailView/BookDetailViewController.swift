@@ -4,7 +4,7 @@
 //
 //  Created by 吕丁阳 on 2020/4/2.
 //  Copyright © 2020 吕丁阳. All rights reserved.
-// http://123.56.238.98/images/10001.png
+// 
 
 import UIKit
 import SDWebImage
@@ -18,8 +18,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     class func detailViewControllerForBook(_ book: Book) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let viewController =
-            storyboard.instantiateViewController(withIdentifier: "BookDetailViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "BookDetailViewController")
         
         if let detailViewController = viewController as? BookDetailViewController {
             detailViewController.selectBook = book
@@ -50,7 +49,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         case 0:
             cellIdentifier = "bookInformation"
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookInformationCell
-            
+            cell.bookid = selectBook.id
             // Load image from web if it's not loaded before. Since SDWebImage has handled the storeage already for us, we don't need manage this personally.
             let urlString = selectBook.image
             let url = URL(string: urlString)
@@ -66,6 +65,8 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         default:
             cellIdentifier = "bookintroduction"
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookIntroductionCell
+            cell.bookIntroduction.text = selectBook.breifIntroduction
+
             cell.selectionStyle = .none
             return cell
         }
