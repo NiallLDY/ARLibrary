@@ -28,6 +28,8 @@ struct LoginView: View {
                             // 49.234.211.136:8080/logout
                             self.loginSuccessed = false
                             self.settingStore.hasLogin = false
+                            self.settingStore.username = ""
+                            self.settingStore.password = ""
                         }
                     }
                     Section(header: Text("我的收藏")) {

@@ -129,9 +129,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHp-R7-01h">
-                                                    <rect key="frame" x="354" y="197" width="40" height="40"/>
+                                                    <rect key="frame" x="354" y="199" width="40" height="38"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="ZwN-68-zPZ"/>
+                                                        <constraint firstAttribute="height" constant="38.039999999999999" id="ZwN-68-zPZ"/>
                                                         <constraint firstAttribute="width" constant="40" id="ieu-4E-b1t"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>

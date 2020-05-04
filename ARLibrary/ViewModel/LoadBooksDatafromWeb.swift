@@ -32,8 +32,9 @@ func loadData(urlString: String, completion: @escaping ([Book]) -> ()) {
         guard let data = data else { return }
         // print(data.html2String)
         let books: [Book] = decodeJSON(data: data)
+        let sortedBooks = books.sorted { $0.id < $1.id }
         DispatchQueue.main.async {
-            completion(books)
+            completion(sortedBooks)
         }
         
     }
