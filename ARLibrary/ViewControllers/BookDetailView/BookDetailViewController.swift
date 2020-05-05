@@ -11,8 +11,12 @@ import SDWebImage
 
 class BookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    struct Section {
+        let header: String?
+        let footer: String?
+    }
     var selectBook: Book!
-    
+    var sections: [Section] = []
     // MARK: - Initialization
     
     class func detailViewControllerForBook(_ book: Book) -> UIViewController {
@@ -30,6 +34,12 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     // Number of sections.
     func numberOfSections(in tableView: UITableView) -> Int {
         2
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sections[section].header
+    }
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return self.sections[section].footer
     }
     // Number of rows in each section.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,20 +76,20 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
             cellIdentifier = "bookintroduction"
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookIntroductionCell
             cell.bookIntroduction.text = selectBook.breifIntroduction
-
+            
             cell.selectionStyle = .none
             return cell
         }
     }
     // The title of the header in each section.
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "书籍基本信息"
-        default:
-            return "书籍简介"
-        }
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section {
+//        case 0:
+//            return "书籍基本信息"
+//        default:
+//            return "书籍简介"
+//        }
+//    }
     
     
     // MARK: - Path
@@ -89,13 +99,19 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         navigationItem.title = "书籍信息"
         
-        
         simplifiedPath.append(Point(x: 0, y: 0))
         simplifiedPath.append(Point(x: 37, y: 0))
         simplifiedPath.append(Point(x: 37, y: -294))
         simplifiedPath.append(Point(x: 1, y: -294))
         simplifiedPath.append(Point(x: 1, y: -255))
         simplifiedPath.append(Point(x: -66, y: -255))
+        
+        self.sections = [
+            Section(header: "书籍基本信息", footer: "点击🌟即可收藏/取消收藏"),
+            Section(header: "书籍简介", footer: nil)
+        
+        ]
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {

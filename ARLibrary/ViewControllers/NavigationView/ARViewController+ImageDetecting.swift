@@ -16,13 +16,16 @@ extension ARViewController {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
-        if referenceImage.name == "al" {
-            pathNode.position.y = 0
+        if referenceImage.name == "start" {
+            self.pathNode.position.y = 0
             
             let heght = referenceImage.physicalSize.height
-            pathNode.position.z = pathNode.position.z + Float(heght)/2
-            
-            node.addChildNode(pathNode)
+            self.pathNode.position.z = self.pathNode.position.z + Float(heght)/2
+            updateQueue.async {
+                self.pathNode.opacity = 0.0
+                self.pathNode.runAction(self.roadFadein)
+                node.addChildNode(self.pathNode)
+            }
             return
         }
         updateQueue.async {
@@ -70,6 +73,11 @@ extension ARViewController {
             .fadeOpacity(to: 0.85, duration: 0.25),
             .fadeOut(duration: 0.5),
             .removeFromParentNode()
+        ])
+    }
+    var roadFadein: SCNAction {
+        return .sequence([
+            .fadeIn(duration: 0.5)
         ])
     }
 }
