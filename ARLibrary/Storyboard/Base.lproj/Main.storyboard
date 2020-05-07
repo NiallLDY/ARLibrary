@@ -234,6 +234,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8MH-vc-P4i"/>
                     </view>
+                    <connections>
+                        <outlet property="ARButton" destination="ia2-6G-QzD" id="yKm-PC-zkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2f-JD-eqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

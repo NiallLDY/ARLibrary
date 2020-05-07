@@ -18,7 +18,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     let coachingOverlay = ARCoachingOverlayView()
     var path: [Point] = [Point]()
     var pathNode = SCNPathNode(path: [])
-    let length: Float = 0.1
+    let length: Float = 0.01
     
     var selectedBook: Book!
     
@@ -94,7 +94,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             fatalError("Missing expected asset catalog resources.")
         }
         
-
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal, .vertical]

@@ -7,6 +7,8 @@
 //
 
 import ARKit
+import SceneKit
+
 
 extension ARViewController {
     
@@ -25,7 +27,25 @@ extension ARViewController {
                 self.pathNode.opacity = 0.0
                 self.pathNode.runAction(self.roadFadein)
                 node.addChildNode(self.pathNode)
+                
+                let des = self.pathNode.path
+                
+                let desrepeat = SCNAction.repeatForever(self.des)
+                
+                let scene = SCNScene(named: "art.scnassets/Arrow.scn")!
+                let arrowNode = scene.rootNode.childNodes
+                for childnode in arrowNode {
+                    
+                    childnode.position = SCNVector3(des.last?.x ?? 0, 1, des.last?.z ?? 0)
+                    childnode.runAction(desrepeat)
+                    node.addChildNode(childnode)
+                }
             }
+            
+            // arrowNode.position = des.last ?? SCNVector3(0, 0, 0)
+            
+//            arrowNode.runAction(desrepeat)
+//            node.addChildNode(arrowNode)
             return
         }
         updateQueue.async {
@@ -71,13 +91,20 @@ extension ARViewController {
             .fadeOpacity(to: 0.85, duration: 0.25),
             .fadeOpacity(to: 0.15, duration: 0.25),
             .fadeOpacity(to: 0.85, duration: 0.25),
-            .fadeOut(duration: 0.5),
-            .removeFromParentNode()
+//            .fadeOut(duration: 0.5),
+//            .removeFromParentNode()
         ])
     }
     var roadFadein: SCNAction {
         return .sequence([
+            .wait(duration: 1),
             .fadeIn(duration: 0.5)
+        ])
+    }
+    var des: SCNAction {
+        return .sequence([
+            .move(by: SCNVector3(0.3, 0, 0), duration: 0.4),
+            .move(by: SCNVector3(-0.3, 0, 0), duration: 0.4),
         ])
     }
 }

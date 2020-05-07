@@ -11,6 +11,7 @@ import SDWebImage
 
 class BookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var ARButton: UIButton!
     struct Section {
         let header: String?
         let footer: String?
@@ -100,11 +101,14 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         navigationItem.title = "书籍信息"
         
         simplifiedPath.append(Point(x: 0, y: 0))
-        simplifiedPath.append(Point(x: 37, y: 0))
-        simplifiedPath.append(Point(x: 37, y: -294))
-        simplifiedPath.append(Point(x: 1, y: -294))
-        simplifiedPath.append(Point(x: 1, y: -255))
-        simplifiedPath.append(Point(x: -66, y: -255))
+        simplifiedPath.append(Point(x: 582, y: 0))
+        simplifiedPath.append(Point(x: 582, y: 240))
+//        simplifiedPath.append(Point(x: 284, y: 240))
+        
+//        simplifiedPath.append(Point(x: 37, y: -294))
+//        simplifiedPath.append(Point(x: 1, y: -294))
+//        simplifiedPath.append(Point(x: 1, y: -255))
+//        simplifiedPath.append(Point(x: -66, y: -255))
         
         self.sections = [
             Section(header: "书籍基本信息", footer: "点击🌟即可收藏/取消收藏"),

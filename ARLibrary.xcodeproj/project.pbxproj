@@ -17,6 +17,7 @@
 		B63383062439DE8B00A45438 /* SCNGeometry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63383022439DE8B00A45438 /* SCNGeometry+Extensions.swift */; };
 		B63383072439DE8B00A45438 /* SCNPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63383032439DE8B00A45438 /* SCNPathNode.swift */; };
 		B63383092439DFBF00A45438 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63383082439DFBF00A45438 /* Map.swift */; };
+		B656304C2463F2B50075F705 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B656304B2463F2B50075F705 /* art.scnassets */; };
 		B662D0AA245A64BE007A7ED1 /* myProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662D0A9245A64BE007A7ED1 /* myProfile.swift */; };
 		B662D0AC245A6DE2007A7ED1 /* checkVaild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662D0AB245A6DE2007A7ED1 /* checkVaild.swift */; };
 		B662D0B2245A7F5F007A7ED1 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662D0B1245A7F5F007A7ED1 /* BookListView.swift */; };
@@ -52,6 +53,7 @@
 		B63383022439DE8B00A45438 /* SCNGeometry+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNGeometry+Extensions.swift"; sourceTree = "<group>"; };
 		B63383032439DE8B00A45438 /* SCNPathNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNPathNode.swift; sourceTree = "<group>"; };
 		B63383082439DFBF00A45438 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		B656304B2463F2B50075F705 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		B662D0A9245A64BE007A7ED1 /* myProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfile.swift; sourceTree = "<group>"; };
 		B662D0AB245A6DE2007A7ED1 /* checkVaild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkVaild.swift; sourceTree = "<group>"; };
 		B662D0B1245A7F5F007A7ED1 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				B6DC9A4A2434363500155315 /* books.json */,
 				B6F32FD0243304B3005812B2 /* SceneDelegate.swift */,
 				B6F32FCE243304B3005812B2 /* AppDelegate.swift */,
+				B656304B2463F2B50075F705 /* art.scnassets */,
 				B6F32FD7243304B6005812B2 /* Assets.xcassets */,
 				B6F32FDC243304B6005812B2 /* Info.plist */,
 			);
@@ -342,6 +345,7 @@
 				B6DC9A4B2434363500155315 /* books.json in Resources */,
 				B6F32FDB243304B6005812B2 /* LaunchScreen.storyboard in Resources */,
 				B6F32FD8243304B6005812B2 /* Assets.xcassets in Resources */,
+				B656304C2463F2B50075F705 /* art.scnassets in Resources */,
 				B6F32FD6243304B3005812B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,11 +529,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7732437C8W;
 				INFOPLIST_FILE = ARLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ldy.ARLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldy.ARLibrary2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,11 +548,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7732437C8W;
 				INFOPLIST_FILE = ARLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ldy.ARLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldy.ARLibrary2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
