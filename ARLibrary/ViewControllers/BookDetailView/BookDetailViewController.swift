@@ -103,6 +103,9 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         simplifiedPath.append(Point(x: 0, y: 0))
         simplifiedPath.append(Point(x: 582, y: 0))
         simplifiedPath.append(Point(x: 582, y: 240))
+        simplifiedPath.append(Point(x: 582, y: 355))
+        simplifiedPath.append(Point(x: 845, y: 495))
+        simplifiedPath.append(Point(x: 905, y: 495))
 //        simplifiedPath.append(Point(x: 284, y: 240))
         
 //        simplifiedPath.append(Point(x: 37, y: -294))

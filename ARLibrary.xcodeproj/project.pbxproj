@@ -69,7 +69,7 @@
 		B6DC9A4E24358FD100155315 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		B6DC9A502435AA4500155315 /* BookInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformationCell.swift; sourceTree = "<group>"; };
 		B6DC9A522435AE4D00155315 /* BookIntroductionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIntroductionCell.swift; sourceTree = "<group>"; };
-		B6F32FCB243304B3005812B2 /* ARLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F32FCB243304B3005812B2 /* AR图书馆.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR图书馆.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F32FCE243304B3005812B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F32FD0243304B3005812B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B6F32FD2243304B3005812B2 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 		B6F32FCC243304B3005812B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B6F32FCB243304B3005812B2 /* ARLibrary.app */,
+				B6F32FCB243304B3005812B2 /* AR图书馆.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 				B662D0B4245AB12A007A7ED1 /* SDWebImageSwiftUI */,
 			);
 			productName = ARLibrary;
-			productReference = B6F32FCB243304B3005812B2 /* ARLibrary.app */;
+			productReference = B6F32FCB243304B3005812B2 /* AR图书馆.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -535,7 +535,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ldy.ARLibrary2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AR图书馆";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -554,7 +554,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ldy.ARLibrary2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AR图书馆";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

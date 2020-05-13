@@ -60,7 +60,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                 // self.blurView.isHidden = true
             })
         }
-        
+        // sceneView.showsStatistics = true
         
     }
     override func viewWillAppear(_ animated: Bool) {

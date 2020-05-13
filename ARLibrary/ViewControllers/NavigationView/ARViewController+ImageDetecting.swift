@@ -36,7 +36,7 @@ extension ARViewController {
                 let arrowNode = scene.rootNode.childNodes
                 for childnode in arrowNode {
                     
-                    childnode.position = SCNVector3(des.last?.x ?? 0, 1, des.last?.z ?? 0)
+                    childnode.position = SCNVector3(des.last?.x ?? 0, 1.13, des.last?.z ?? 0)
                     childnode.runAction(desrepeat)
                     node.addChildNode(childnode)
                 }
