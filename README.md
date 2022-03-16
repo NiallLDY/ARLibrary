@@ -53,7 +53,7 @@ AR所使用的惯性视觉里程计可以实时地追踪设备的运动变化，
 
 ## 演示视频
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV1cV411r7L8&amp;page=1&amp;high_quality=1&amp;danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+https://user-images.githubusercontent.com/37976199/158530636-c8f08495-547a-42e0-bcc1-5f8ac73d0d63.mp4
 
 
 ## 创新点
