@@ -1,6 +1,10 @@
 #  ARLibrary
 ARLibrary: AR 导航应用 —— AR 图书馆导航
 
+## 演示视频
+
+https://user-images.githubusercontent.com/37976199/158530636-c8f08495-547a-42e0-bcc1-5f8ac73d0d63.mp4
+
 ## Related posts
 
 [AR 导航应用](https://codeswift.top/posts/ar-application/)
@@ -51,9 +55,6 @@ AR所使用的惯性视觉里程计可以实时地追踪设备的运动变化，
 
 ![16150938459493](https://codeswift.top/assets/img/images/2021/03/07/16150938459493.png)
 
-## 演示视频
-
-https://user-images.githubusercontent.com/37976199/158530636-c8f08495-547a-42e0-bcc1-5f8ac73d0d63.mp4
 
 
 ## 创新点
