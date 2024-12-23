@@ -7,9 +7,9 @@ https://user-images.githubusercontent.com/37976199/158530636-c8f08495-547a-42e0-
 
 ## Related posts
 
-[AR 导航应用](https://codeswift.top/posts/ar-application/)
+[AR 导航应用](https://blog.iswiftai.com/posts/ar-application/)
 
-[AR 导航技术概览](https://codeswift.top/posts/ar-technolgy/)
+[AR 导航技术概览](https://blog.iswiftai.com/posts/ar-technolgy/)
 
 ## 简介
 设计并实现以多源感知的室内定位技术为核心、以增强现实技术为可视化处理手段的软件，并将其应用到智慧校园图书馆中。
@@ -21,19 +21,19 @@ https://user-images.githubusercontent.com/37976199/158530636-c8f08495-547a-42e0-
 
 我们使用基于视觉惯性里程计（Visual Inertial Odometry, VIO）的ARKit框架来跟踪设备的移动和周围环境的变化。VIO将来自摄像机传感器的基于声画框架（AVFoundation）的输入与通过传感器（陀螺仪和加速器）（CoreMotion）捕获的设备运动数据融合在一起，这两个框架协同工作来支持AR的场景识别和跟踪。
 
-![DraggedImage](https://codeswift.top/assets/img/images/2021/03/07/draggedimage.png)
+![DraggedImage](https://blog.iswiftai.com/assets/img/images/2021/03/07/draggedimage.png)
 
 ### ARKit的工作流程
 
 首先捕捉真实世界：真实世界一般由移动设备的摄像头完成。构建虚拟世界：虚拟世界的物体模型，可以有很多物体模型，从而组成一个复杂的虚拟世界。进而将虚拟世界与现实世界相结合：将虚拟世界渲染到捕捉到的真实世界中。与此同时还具备世界追踪功能：当真实世界变化时（如下图中移动摄像头），要能追踪到当前摄像机相对于初始时的位置、角度变化信息，以便实时渲染出虚拟世界相对于现实世界的位置和角度。最终实现场景解析：虚拟物体放在检测识别到的平面上，并有固定的坐标。
 
-![DraggedImage-1](https://codeswift.top/assets/img/images/2021/03/07/draggedimage1.png)
+![DraggedImage-1](https://blog.iswiftai.com/assets/img/images/2021/03/07/draggedimage1.png)
 
 ### 图像识别匹配——实现初始位置校准
 
 AR所使用的惯性视觉里程计可以实时地追踪设备的运动变化，但是无法单独的获取初始位置和方向。我们在室内场景已知位置放置特定的图片标识符，使用图像识别匹配来确定初始位置。
 
-![DraggedImage-2](https://codeswift.top/assets/img/images/2021/03/07/draggedimage2.png)
+![DraggedImage-2](https://blog.iswiftai.com/assets/img/images/2021/03/07/draggedimage2.png)
 
 所述方法包括首先灰度处理、寻找特征点，包括已知的标识图的特征点以及当前捕捉到的场景的特征点、特征点匹配，在当前的场景中匹配在标识图的特征点、投影几何，对图像的位置和方向进行估算、局部坐标建立。
 
@@ -41,19 +41,19 @@ AR所使用的惯性视觉里程计可以实时地追踪设备的运动变化，
 
 ### 搜索书籍
 
-![16150934205394](https://codeswift.top/assets/img/images/2021/03/07/16150934205394.png)
+![16150934205394](https://blog.iswiftai.com/assets/img/images/2021/03/07/16150934205394.png)
 
 ### AR导航确定初始位置
 
-![16150936659000](https://codeswift.top/assets/img/images/2021/03/07/16150936659000.png)
+![16150936659000](https://blog.iswiftai.com/assets/img/images/2021/03/07/16150936659000.png)
 
 ### AR导航
 
-![16150937693294](https://codeswift.top/assets/img/images/2021/03/07/16150937693294.png)
+![16150937693294](https://blog.iswiftai.com/assets/img/images/2021/03/07/16150937693294.png)
 
 ### 到终点识别图书封面
 
-![16150938459493](https://codeswift.top/assets/img/images/2021/03/07/16150938459493.png)
+![16150938459493](https://blog.iswiftai.com/assets/img/images/2021/03/07/16150938459493.png)
 
 
 
@@ -63,14 +63,14 @@ AR所使用的惯性视觉里程计可以实时地追踪设备的运动变化，
 
 传统的导航，采用二维平面显示路径以及所在位置的居多。而本项目的创新之处在于运用增强现实技术，通过手机的摄像头，将虚拟的导航规划路线，放置在手机的屏幕上，实现虚拟与现实巧妙结合，提升了在室内导航的可视化效果、引导的直观性大大提升，具有良好的可交互性，提升了用户体验。
 
-![截屏2020-07-20 下午2.17.08](https://codeswift.top/assets/img/images/2021/03/07/jie-ping20200720-xia-wu21708.png)
+![截屏2020-07-20 下午2.17.08](https://blog.iswiftai.com/assets/img/images/2021/03/07/jie-ping20200720-xia-wu21708.png)
 
 ### 室内导航技术
 
 一般基于射频信号的室内导航，例如Wi-Fi、蓝牙定位等，需要构建信号网络，根据不同点，接收信号的强弱来计算所在位置，成本、功耗较高。
 相比较而言，本系统采用惯性传感器，来采集一些参数信息，使用航位推算，实现室内导航，而目前被广泛使用的智能手机基本内置这些传感器，可以满足惯性导航的硬件需求，//因此具有低成本、高普适性的特点。
 
-![截屏2020-07-20 下午2.18.18](https://codeswift.top/assets/img/images/2021/03/07/jie-ping20200720-xia-wu21818.png)
+![截屏2020-07-20 下午2.18.18](https://blog.iswiftai.com/assets/img/images/2021/03/07/jie-ping20200720-xia-wu21818.png)
 
 ### 广阔应用前景
 
